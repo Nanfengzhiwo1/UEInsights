@@ -1,7 +1,7 @@
-# EnterWorldforPIE(to be continue...)
+## PIE(to be continue...)
 ![image](https://github.com/user-attachments/assets/776783bc-bd57-42cf-8752-abbff098335b)
 
-## DuplicatedWorldForPIE
+### DuplicatedWorldForPIE
   _when click the PLay Button,editor will do this action first._
   
 ```
@@ -28,3 +28,5 @@ UWorld* UWorld::GetDuplicatedWorldForPIE(UWorld* InWorld, UPackage* InPIEackage,
 ```
 ### DuplicateObjects
 ### AddStreamingLevelsPrefix
+
+## LoadObject
