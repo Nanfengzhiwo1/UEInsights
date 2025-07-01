@@ -25,3 +25,38 @@ What does the function selected in Tracks do next?
 Highlight event,find instance in Tracks and open source in Visual Studio
 
 ## Performance Macros
+### TRACE_CPUPROFILER_EVENT_SCOPE
+Mark the CPU execution time of a code block
+
+_TRACE_CPUPROFILER_EVENT_SCOPE is a performance analysis macro provided by UE based on its own trace system_
+```
+UWorld* UWorld::GetDuplicatedWorldForPIE()
+{
+    TRACE_CPUPROFILER_EVENT_SCOPE(UWorld::GetDuplicatedWorldForPIE);
+
+    ......
+}
+```
+### QUICK_SCOPE_CYCLE_COUNTER
+Used to quickly measure the CPU code segment execution time
+
+_QUICK_SCOPE_CYCLE_COUNTER is part of the UE statistics system_
+```
+UWorld* UWorld::DuplicateWorldForPIE(const FString& PackageName, UWorld* OwningWorld)
+{
+	QUICK_SCOPE_CYCLE_COUNTER(STAT_World_DuplicateWorldForPIE);
+
+  ......
+```
+### SCOPE_SECONDS_COUNTER
+Output a piece of code consuming time
+
+```
+double Duration = 0.0;
+{
+	SCOPE_SECONDS_COUNTER(Duration);
+
+  ......
+}
+```
+
